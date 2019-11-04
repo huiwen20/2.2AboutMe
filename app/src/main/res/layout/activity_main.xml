@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/layout_padding"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewName"
+        style="@style/my_text_style"
+        android:layout_gravity="center"
+        android:text="@string/my_name"
+        app:fontFamily="@font/roboto" />
+
+    <EditText
+        android:id="@+id/editNickName"
+        style="@style/nameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/what_is_your_nickname"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/buttonDone"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:text="@string/Done"
+        android:fontFamily="@font/roboto" />
+
+    <TextView
+        android:id="@+id/textNickName"
+        style="@style/nameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:text=""
+        android:background="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/imageViewProfilePicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/profile_pic"
+        app:srcCompat="@drawable/my_pic" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/my_text_style"
+                android:id="@+id/textViewProfileDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_desc"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
